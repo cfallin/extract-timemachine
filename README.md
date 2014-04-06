@@ -17,7 +17,7 @@ on your TimeMachine backup drive):
 $ ./extract.sh /dev/sdb2 my-mac-name /tmp/backup-restore
 
 History
-=======
+-------
 
 This script was hacked together on 2014-04-05 by Chris Fallin
 <cfallin@c1f.net>. I developed this after experiencing general flakiness on a

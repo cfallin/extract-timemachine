@@ -58,11 +58,11 @@ if [ "$FIRSTDUMP" = "" ]; then
     exit 1
 fi
 
-SRC=$DUMPDIR/$FIRSTDUMP
+SRCPATH=$DUMPDIR/$FIRSTDUMP
 
-echo Extracting from ${SRC}...
+echo Extracting from ${SRCPATH}...
     
-$EXTRACTPY -s $SRC -d $DEST
+$EXTRACTPY -s $SRCPATH -d $DEST
 
 umount $SRC
 rm -r $SRC
