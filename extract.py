@@ -31,10 +31,13 @@ def mkdir_recursive(path):
         os.mkdir(path)
 
 def handle_path(args, path, src_path, dst_path, visited_parents):
-    if os.path.isdir(src_path):
-        handle_dir(args, path, src_path, dst_path, visited_parents)
-    elif os.path.isfile(src_path):
-        handle_file(args, path, src_path, dst_path, visited_parents)
+    try:
+        if os.path.isdir(src_path):
+            handle_dir(args, path, src_path, dst_path, visited_parents)
+        elif os.path.isfile(src_path):
+            handle_file(args, path, src_path, dst_path, visited_parents)
+    except:
+        pass
 
 def handle_dir(args, path, src_path, dst_path, visited_parents):
     mkdir_recursive(dst_path)
